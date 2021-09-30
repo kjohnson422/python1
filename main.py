@@ -1,5 +1,4 @@
 #Tic Tac Toe Game
-#Assignment 4
 from random import randrange
 
 
