@@ -31,3 +31,4 @@ if (piglatin == "-1"):
     print("No vowels found. Pig Latin not possible");
 else:
     print(piglatin);
+
