@@ -1,34 +1,17 @@
-# Python program to encode a word to a Pig Latin.
+# take in user input
 
-def isVowel(c):
-    return (c == 'A' or c == 'E' or c == 'I' or
-            c == 'O' or c == 'U' or c == 'a' or
-            c == 'e' or c == 'i' or c == 'o' or
-            c == 'u');
+def splitString():
+    sentence = input("Print a sentence: ")
+    print(*sentence.split(), sep='\n')
 
 
-def pigLatin(s):
-    # the index of the first vowel is stored.
-    length = len(s);
-    index = -1;
-    for i in range(length):
-        if (isVowel(s[i])):
-            index = i;
-            break;
-
-    # Pig Latin is possible only if vowels are present
-    if (index == -1):
-        return "-1";
-
-    # Take all characters after index Append all characters which are before index. Finally append "ay"
-    return s[index:] + s[0:index] + "ay";
+#function 2
+def splitString1():
+    userInput = input("Print a sentence: ")
+    for i in userInput.strip().split('\n'):
+        [print(j) for j in i.split()]
 
 
-#str = pigLatin("graphic");
-print("Enter a word: ")
-piglatin = pigLatin(input())
-if (piglatin == "-1"):
-    print("No vowels found. Pig Latin not possible");
-else:
-    print(piglatin);
-
+if __name__ == '__main__':
+    splitString()
+    splitString1()
